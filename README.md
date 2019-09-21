@@ -25,5 +25,14 @@ npm run test
 npm run lint
 ```
 
+### Install api-mock
+```
+npm install -g json-server
+```
+
+### Serve db.json
+```
+json-server --watch db.json
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
