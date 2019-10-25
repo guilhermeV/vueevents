@@ -44,42 +44,6 @@
       "date": "2019-02-02T23:27:00.000Z",
       "time": "1:00",
       "attendees": []
-    },
-    {
-      "id": 2292990,
-      "user": {
-        "id": "abc123",
-        "name": "Adam Jahr"
-      },
-      "category": "nature",
-      "organizer": {
-        "id": "abc123",
-        "name": "Adam Jahr"
-      },
-      "title": "Working?",
-      "description": "bla",
-      "location": "location",
-      "date": "2019-10-11T22:57:00.000Z",
-      "time": "6:00",
-      "attendees": []
-    },
-    {
-      "id": 5139256,
-      "user": {
-        "id": "abc123",
-        "name": "Adam Jahr"
-      },
-      "category": "nature",
-      "organizer": {
-        "id": "abc123",
-        "name": "Adam Jahr"
-      },
-      "title": "Planting trees",
-      "description": "Plant",
-      "location": "Forest",
-      "date": "2019-10-09T23:01:00.000Z",
-      "time": "13:00",
-      "attendees": []
     }
   ]
 }
