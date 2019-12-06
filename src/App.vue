@@ -31,6 +31,10 @@ export default {
           url: '/'
         },
         {
+          label: 'Map',
+          url: '/map'
+        },
+        {
           label: 'List',
           url: '/list'
         },

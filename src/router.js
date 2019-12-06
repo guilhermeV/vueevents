@@ -10,6 +10,7 @@ import NotFound from "./views/NotFound.vue";
 import NetworkIssue from "./views/NetworkIssue.vue";
 import Example from "./views/Example.vue";
 import Search from "./views/Search.vue";
+import Map from "./views/Map.vue";
 
 Vue.use(Router);
 
@@ -21,6 +22,12 @@ const router = new Router({
       path: "/",
       name: "search",
       component: Search,
+      props: true
+    },
+    {
+      path: "/map",
+      name: "map",
+      component: Map,
       props: true
     },
     {
