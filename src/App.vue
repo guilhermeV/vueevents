@@ -1,40 +1,21 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+      <v-toolbar-title>Moov Dashboard</v-toolbar-title>
       <v-spacer></v-spacer>
-
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
+        v-for="link in links"
+        :key="`${link.label}-header-link`"
         text
+        rounded
+        :to="link.url"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        {{ link.label }}
       </v-btn>
     </v-app-bar>
-
     <v-content>
-      <router-view />
+    </br>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
@@ -42,10 +23,24 @@
 <script>
 export default {
   name: 'App',
-
-  data: () => ({
-    //
-  })
+  data() {
+    return {
+      links: [
+        {
+          label: 'Search',
+          url: '/'
+        },
+        {
+          label: 'List',
+          url: '/list'
+        },
+        {
+          label: 'Create',
+          url: '/create'
+        }
+      ]
+    }
+  }
 }
 </script>
 

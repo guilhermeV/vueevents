@@ -3,7 +3,7 @@
     <router-link to="/" class="brand">Moov</router-link> |
     <nav>
       <router-link :to="{ name: 'list' }">List</router-link> |
-      <router-link :to="{ name: 'event-create' }">Create</router-link>
+      <router-link :to="{ name: 'create' }">Create</router-link>
     </nav>
   </div>
 </template>
