@@ -9,6 +9,7 @@ import store from "@/store/store.js";
 import NotFound from "./views/NotFound.vue";
 import NetworkIssue from "./views/NetworkIssue.vue";
 import Example from "./views/Example.vue";
+import Search from "./views/Search.vue";
 
 Vue.use(Router);
 
@@ -18,7 +19,13 @@ const router = new Router({
   routes: [
     {
       path: "/",
-      name: "event-list",
+      name: "search",
+      component: Search,
+      props: true
+    },
+    {
+      path: "/list",
+      name: "list",
       component: EventList,
       props: true
     },

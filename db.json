@@ -1,6 +1,9 @@
 {
   "events": [
     {
+      "district": "Butantã",
+      "street": "Augusto Perroni",
+      "rooms": 1,
       "id": 5928101,
       "user": {
         "id": "abc123",
@@ -16,6 +19,9 @@
       "attendees": []
     },
     {
+      "district": "Itaim Bibi",
+      "street": "Pedroso Alvarenga",
+      "rooms": 2,
       "id": 8419988,
       "user": {
         "id": "abc123",
@@ -31,6 +37,9 @@
       "attendees": []
     },
     {
+      "district": "Jardim América",
+      "street": "Avenida Brasil",
+      "rooms": 3,
       "id": 4582797,
       "user": {
         "id": "abc123",

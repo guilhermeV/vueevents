@@ -5,7 +5,7 @@ module.exports = {
     },
     'extends': [
       'plugin:vue/essential',
-      'plugin:prettier/recommended', // we added this line
+      'plugin:prettier/recommended',
       '@vue/prettier'
     ],
     rules: {

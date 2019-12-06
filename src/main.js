@@ -7,6 +7,7 @@ import camelCase from "lodash/camelCase";
 import "nprogress/nprogress.css";
 import Vuelidate from "vuelidate";
 import DateFilter from "./filters/date";
+import vuetify from './plugins/vuetify'
 
 Vue.filter("date", DateFilter);
 
@@ -31,6 +32,7 @@ requireComponent.keys().forEach(fileName => {
 });
 
 new Vue({
+  vuetify,
   router,
   store,
   render: h => h(App)

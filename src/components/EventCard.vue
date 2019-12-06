@@ -4,9 +4,9 @@
     :to="{ name: 'event-show', params: { id: event.id } }"
   >
     <div class="event-card -shadow">
-      <span class="eyebrow">@{{ event.time }} on {{ event.date | date}}</span>
-      <h4 class="title">{{ event.title }}</h4>
-      <BaseIcon name="users">{{ event.attendees.length }} attending</BaseIcon>
+      <span class="eyebrow">Bairro: {{ event.district}}</span>
+      <h4 class="title">{{ event.street }}</h4>
+      <BaseIcon name="users">{{ event.rooms }} rooms</BaseIcon>
     </div>
   </router-link>
 </template>
