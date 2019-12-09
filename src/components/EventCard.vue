@@ -1,12 +1,18 @@
 <template>
   <router-link
     class="event-link"
-    :to="{ name: 'event-show', params: { id: event.id } }"
+    :to="{ name: 'event-show', params: { id: property.id } }"
   >
-    <div class="event-card -shadow">
-      <span class="eyebrow">Bairro: {{ event.district}}</span>
-      <h4 class="title">{{ event.street }}</h4>
-      <BaseIcon name="users">{{ event.rooms }} rooms</BaseIcon>
+    <div class="row event-card -shadow">
+      <div class="col-md-6">
+        <span class="eyebrow">Bairro: {{ property.street }}</span>
+        <!-- <h4 class="title">{{ property.street }}</h4> -->
+        <h4 class="title">Rua: Augusto Perroni</h4>
+        <BaseIcon name="users">{{ property.number }} rooms</BaseIcon>
+      </div>
+      <div class="col-md-6">
+        <img src="../assets/imagem.jpg" id="picture"/>
+      </div>
     </div>
   </router-link>
 </template>
@@ -14,12 +20,15 @@
 <script>
 export default {
   props: {
-    event: Object
+    property: Object
   }
 }
 </script>
 
 <style scoped>
+#picture{
+  width: 170px
+}
 .event-card {
   padding: 20px;
   margin-bottom: 24px;

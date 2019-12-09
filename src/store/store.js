@@ -1,27 +1,47 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import * as user from "@/store/modules/user.js";
-import * as event from "@/store/modules/event.js";
-import * as notification from "@/store/modules/notification.js";
+import Vue from 'vue'
+import Vuex from 'vuex'
+import PropertyService from '@/services/PropertyService'
 
-Vue.use(Vuex);
+import * as user from '@/store/modules/user.js'
+import * as event from '@/store/modules/event.js'
+import * as notification from '@/store/modules/notification.js'
+
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
-    user,
+    notification,
     event,
-    notification
+    user
+  },
+  mutations: {
+    SET_PROPERTIES(state, properties) {
+      console.log('mutations')
+      state.properties = properties
+      console.log(state.properties)
+    }
+  },
+  actions: {
+    fetchProperties({ commit, dispatch }) {
+      return PropertyService.getAllProperties()
+        .then(response => {
+          commit('SET_PROPERTIES', response.data)
+        })
+        .catch(error => {
+          const notification = {
+            type: 'error',
+            message: 'There was a problem fetching properties: ' + error.message
+          }
+          dispatch('notification/add', notification, { root: true })
+        })
+    }
+  },
+  getters: {
+    getProperties: state => {
+      return state.properties
+    }
   },
   state: {
-    events: [],
-    categories: [
-      "sustainability",
-      "nature",
-      "animal welfare",
-      "housing",
-      "education",
-      "food",
-      "community"
-    ]
+    properties: []
   }
-});
+})

@@ -4,28 +4,17 @@
     :to="{ name: 'event-show', params: { id: event.id } }"
   >
     <div class="event-card -shadow">
-      <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
-      <h4 class="title">{{ event.title }}</h4>
-      <BaseIcon name="users">{{ event.attendees.length }} attending</BaseIcon>
+      <span class="eyebrow">Bairro: {{ event.district}}</span>
+      <h4 class="title">{{ event.street }}</h4>
+      <BaseIcon name="users">{{ event.rooms }} rooms</BaseIcon>
     </div>
   </router-link>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      event: {
-        id: 1,
-        title: 'Beach Cleanup',
-        date: 'Tues Aug 19, 2018',
-        time: '6:00',
-        attendees: [
-          { id: 'abc123', name: 'Joe Doe' },
-          { id: 'abc124', name: 'Snow John' }
-        ]
-      }
-    }
+  props: {
+    event: Object
   }
 }
 </script>
@@ -44,10 +33,13 @@ export default {
 .event-card > .title {
   margin: 0;
 }
-
 .event-link {
   color: black;
   text-decoration: none;
   font-weight: 100;
+}
+
+.-shadow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
 }
 </style>
