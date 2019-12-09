@@ -45,5 +45,45 @@
       "time": "1:00",
       "attendees": []
     }
-  ]
+  ],
+  "tasks": [{
+    "id":1,
+    "difficulty": "easy",
+    "date": "2019-09-12",
+    "limitDate": "2020-09-19",
+    "bounty": "100.00",
+    "title": "Create vue seed for centerdev",
+    "description": "Create frontend CRUD for event",
+    "languages": ["vue.js","css", "html"],
+    "status": "Done",
+    "project": "centerdev",
+    "user": "guilhermep"
+  },
+  {
+    "id":2,
+    "difficulty": "medium",
+    "date": "2019-09-12",
+    "limitDate": "2019-09-19",
+    "bounty": "150.00",
+    "title": "Create task example",
+    "description": "Create frontend CRUD for task",
+    "languages": ["vue.js","css", "html"],
+    "status": "Doing",
+    "project": "centerdev",
+    "user": "guilhermep"
+  },
+  {
+    "id":3,
+    "difficulty": "hard",
+    "date": "2019-09-19",
+    "limitDate": "2019-10-10",
+    "bounty": "300.00",
+    "title": "Configure backend server",
+    "description": "Make real response to get events",
+    "languages": ["java"],
+    "status": "Open",
+    "project": "centerdev",
+    "user": ""
+  }
+]
 }
