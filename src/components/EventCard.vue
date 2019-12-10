@@ -7,11 +7,29 @@
       <div class="col-md-6">
         <span class="eyebrow">Bairro: {{ property.street }}</span>
         <!-- <h4 class="title">{{ property.street }}</h4> -->
-        <h4 class="title">Rua: Augusto Perroni</h4>
-        <BaseIcon name="users">{{ property.number }} rooms</BaseIcon>
+        <h4 class="title">Rua: {{ property.number }}</h4>
+        <BaseIcon name="users">2 rooms</BaseIcon>
+        <div>
+          <span>Valor: R$ 3.000</span>
+        </div>
+        <v-divider></v-divider>
+        <div class="row">
+          <div
+            class="col-md-6"
+            v-for="(time, index) in property.secondsToArrive2"
+            :key="index"
+          >
+            <v-chip class="ma-2" color="green" text-color="white">
+              <v-avatar left class="green darken-4">
+                {{ time || 'X' }}
+              </v-avatar>
+              Minutes
+            </v-chip>
+          </div>
+        </div>
       </div>
       <div class="col-md-6">
-        <img src="../assets/imagem.jpg" id="picture"/>
+        <img src="../assets/imagem.jpg" id="picture" />
       </div>
     </div>
   </router-link>
@@ -26,8 +44,8 @@ export default {
 </script>
 
 <style scoped>
-#picture{
-  width: 170px
+#picture {
+  width: 170px;
 }
 .event-card {
   padding: 20px;

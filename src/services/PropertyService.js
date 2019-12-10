@@ -15,5 +15,8 @@ export default {
   },
   getFilteredProperties(references) {
     return apiClient.post('/property/filter', references)
+  },
+  getDistanceProperties(route) {
+    return apiClient.post('/property/time', route)
   }
 }

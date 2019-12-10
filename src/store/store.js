@@ -16,9 +16,7 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_PROPERTIES(state, properties) {
-      console.log('mutations')
       state.properties = properties
-      console.log(state.properties)
     }
   },
   actions: {
