@@ -8,13 +8,13 @@
 export default {
   props: {
     google: Object,
-    map: Object,
+    map: Object
   },
   provide() {
     return {
       google: this.google,
       map: this.map
     }
-  },
+  }
 }
 </script>

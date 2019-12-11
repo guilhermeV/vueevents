@@ -1,13 +1,14 @@
 <template>
   <div>
-    <div class="event-header">
+    <div class="property-header">
       <img src="../assets/imagem.jpg" id="picture" />
       <v-card class="card">
-      <h3>Bairro: {{ property.district }}</h3>
-      <h4>Rua: {{ property.street }}</h4>
-      <v-chip>Valor: {{ property.price }}</v-chip>
+      <h4>Bairro: {{ property.district }}</h4>
+      <h5>Rua: {{ property.street }}</h5>
+      <div class="row tags">
+      <v-chip class="col-md-6">Valor: {{ property.price }}</v-chip>
       <v-chip
-      class="ma-2"
+      class="col-md-6"
       color="green"
       text-color="white"
     >
@@ -19,6 +20,7 @@
       </v-avatar>
       Rooms
     </v-chip>
+    </div>
       </v-card>
     </div>
     </br>
@@ -30,9 +32,10 @@
     </div>
     </br>
     <v-card class="card">
-    <h2>Property details</h2>
+    <h4>Property details</h4>
+    <div class="row tags">
     <v-chip
-      class="ma-2"
+      class="col-md-4"
       color="info"
       text-color="white"
     >
@@ -42,7 +45,7 @@
       Aceita Pet
     </v-chip>
     <v-chip
-      class="ma-2"
+      class="col-md-4"
       color="info"
       text-color="white"
     >
@@ -52,7 +55,7 @@
       Academia
     </v-chip>
     <v-chip
-      class="ma-2"
+      class="col-md-4"
       color="info"
       text-color="white"
     >
@@ -61,6 +64,7 @@
       </v-avatar>
       Lavanderia
     </v-chip>
+    </div>
     </v-card>
   </div>
 </template>
@@ -90,12 +94,6 @@ export default {
       }
     }
   },
-  props: {
-    // event: {
-    //   type: Object,
-    //   required: true
-    // }
-  },
   computed: {
     mapConfig() {
       return {
@@ -108,6 +106,9 @@ export default {
 </script>
 
 <style scoped>
+.tags {
+  margin: 5px;
+}
 #picture {
   width: 460px;
 }
@@ -120,7 +121,7 @@ export default {
 .location > .icon {
   margin-left: 10px;
 }
-.event-header > .title {
+.property-header > .title {
   margin: 0;
 }
 .list-group {

@@ -8,11 +8,11 @@ import 'nprogress/nprogress.css'
 import Vuelidate from 'vuelidate'
 import DateFilter from './filters/date'
 import vuetify from './plugins/vuetify'
+import bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 Vue.filter('date', DateFilter)
-
 Vue.use(Vuelidate)
-
 Vue.config.productionTip = false
 
 const requireComponent = require.context(

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:9000/api/moov',
+  baseURL: process.env.VUE_APP_API_ENDPOINT,
   withCredentials: false,
   headers: {
     Accept: 'application/json',

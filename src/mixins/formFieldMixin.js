@@ -3,13 +3,13 @@ export const formFieldMixin = {
   props: {
     label: {
       type: String,
-      default: ""
+      default: ''
     },
     value: [String, Number]
   },
   methods: {
-    updateValue(event) {
-      this.$emit("input", event.target.value);
+    updateValue(property) {
+      this.$emit('input', property.target.value)
     }
   }
-};
+}
